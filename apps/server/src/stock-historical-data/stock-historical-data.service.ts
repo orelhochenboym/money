@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { GetStockHistoricalDataDto } from './dto';
 
 @Injectable()
 export class StockHistoricalDataService {
-  getHistoricalData(cik: string) {
+  getHistoricalData(cik: string): GetStockHistoricalDataDto {
     return {
       revenueGrowthInPercent: {
         oneYear: 1.0,
