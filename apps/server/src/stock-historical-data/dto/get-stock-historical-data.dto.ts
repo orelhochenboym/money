@@ -1,38 +1,20 @@
 import { ApiProperty } from '@nestjs/swagger/dist';
 
+import { StockHistoricalDataYear } from '@money-meets-value/types';
+
 export class GetStockHistoricalDataDto {
   @ApiProperty()
-  revenueGrowthInPercent: {
-    oneYear: number;
-    fiveYear: number;
-    tenTear: number;
-  };
+  revenueGrowthInPercent: StockHistoricalDataYear;
 
   @ApiProperty()
-  profitMarginInPercent: {
-    oneYear: number;
-    fiveYear: number;
-    tenTear: number;
-  };
+  profitMarginInPercent: StockHistoricalDataYear;
 
   @ApiProperty()
-  freeCashFlowMarginInPercent: {
-    oneYear: number;
-    fiveYear: number;
-    tenTear: number;
-  };
+  freeCashFlowMarginInPercent: StockHistoricalDataYear;
 
   @ApiProperty()
-  priceToEarningsHistoricalSummed: {
-    oneYear: number;
-    fiveYear: number;
-    tenTear: number;
-  };
+  priceToEarningsHistoricalSummed: StockHistoricalDataYear;
 
   @ApiProperty()
-  priceToFreeCashFlowHistorcalSummed: {
-    oneYear: number;
-    fiveYear: number;
-    tenTear: number;
-  };
+  priceToFreeCashFlowHistorcalSummed: StockHistoricalDataYear;
 }
