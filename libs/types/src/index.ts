@@ -1,1 +1,2 @@
-export * from './stock-historical-data-years';
+export * from './sec-response.type';
+export * from './yearly-stats.type';
