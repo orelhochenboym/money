@@ -10,7 +10,9 @@ export class StockHistoricalDataController {
   ) {}
 
   @Get(':cik')
-  getStockHistoricalData(@Param('cik') cik: string): GetStockHistoricalDataDto {
+  getStockHistoricalData(
+    @Param('cik') cik: string
+  ): Promise<GetStockHistoricalDataDto> {
     return this.stockHistoricalDataService.getHistoricalData(cik);
   }
 }
