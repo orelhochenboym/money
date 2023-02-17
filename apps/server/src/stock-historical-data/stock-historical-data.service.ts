@@ -1,15 +1,14 @@
 import { Injectable } from '@nestjs/common';
+
+import { calculateRevenueYearlyStats } from '@money-meets-value/utils';
 import { GetStockHistoricalDataDto } from './dto';
 
 @Injectable()
 export class StockHistoricalDataService {
-  getHistoricalData(cik: string): GetStockHistoricalDataDto {
+  async getHistoricalData(cik: string): Promise<GetStockHistoricalDataDto> {
+    const revenueYearlyStats = await calculateRevenueYearlyStats(cik);
     return {
-      revenueGrowthInPercent: {
-        oneYear: 1.0,
-        fiveYear: 1.0,
-        tenTear: 1.0,
-      },
+      ...revenueYearlyStats,
       profitMarginInPercent: {
         oneYear: 1.0,
         fiveYear: 1.0,
