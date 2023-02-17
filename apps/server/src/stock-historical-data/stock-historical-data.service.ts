@@ -1,9 +1,6 @@
 import { Injectable } from '@nestjs/common';
 
-import {
-  calculateRevenueYearlyStats,
-  getRevenue,
-} from '@money-meets-value/utils';
+import { calculateRevenueYearlyStats } from '@money-meets-value/utils';
 import { GetStockHistoricalDataDto } from './dto';
 
 @Injectable()
